@@ -1,0 +1,38 @@
+
+<div class="container">
+      <h3>Date :</h3>
+  {{dateFormat | date:'d/M/y - j:m:s'}}
+</div>
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          {{title}}
+      </div>
+     <div class="panel-body">
+        
+      
+      <div class="table-responsive" >
+       <table class="table">
+            <thead>
+                <tr>
+                      <th>Name</th>
+                      <th>author</th>
+                      <th>price</th>
+                </tr>
+             </thead>
+             <tbody>
+                     <tr *ngFor="let book of books">
+                           <td>{{book.name}}</td>
+                           <td>{{book.author}}</td>
+                           <td>{{book.price}}</td>
+                     </tr>
+  
+             </tbody>
+       </table>
+      </div>
+     </div>
+   </div>
+  
+   
+  </div>
+  

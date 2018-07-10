@@ -1,0 +1,34 @@
+<h1>Login component</h1>
+    <div class="container">
+     <form #form="ngForm" novalidate >
+        
+     <div class="form-group">
+            
+        <label for ="fname" class="control-label">First Name:</label>
+            
+            <input type="text" required name="fname" id="fname"  placeholder="First Name" class="form-control"  [ngModel]="model.fname"
+            #firstName="ngModel" />
+        </div>
+        <h3>class name</h3>
+        <h2>{{firstName.className}}</h2>
+        <div>
+            <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">
+
+                FirstName is required
+            </div>
+        </div>
+        <div class="form-group" >
+            <label for ="password" class="control-label">Password :</label>
+            <input type="text" required name="password" id="password"  placeholder="password" minlength="6"
+            class="form-control" [ngModel]="model.password" #password="ngModel" />
+        </div>
+       
+            <div class="alert alert-danger" *ngIf="password.invalid && password.touched">
+
+                password is required
+            </div>
+        
+     
+
+     </form>
+    </div>
